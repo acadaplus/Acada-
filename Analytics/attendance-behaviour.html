@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A fully featured school management platform">
+        <meta name="author" content="Acada Plus +">
+
+        <link rel="shortcut icon" href="images/favicon.ico">
+
+        <title>Acada+ - School Management Platform</title>
+
+        <!--Morris Chart CSS -->
+		<link rel="stylesheet" href="plugins/morris/morris.css" type="text/css">
+        <link rel="stylesheet" href="plugins/jquery-circliful/css/jquery.circliful.css" type="text/css"/>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/core.css" rel="stylesheet" type="text/css" />
+        <link href="css/components.css" rel="stylesheet" type="text/css" />
+        <link href="css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="css/menu.css" rel="stylesheet" type="text/css" />
+        <link href="css/responsive.css" rel="stylesheet" type="text/css" />
+
+        <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="js/modernizr.min.js"></script>
+
+
+    </head>
+
+
+    <body>
+
+        <!-- Navigation Bar-->
+        <header id="topnav">
+            <div class="topbar-main">
+                <div class="container">
+
+                    <!-- LOGO -->
+                    <div class="topbar-left">
+                        <a href="../LandingApp/landing-page.html" class="logo"><span> acada<span>+</span></span></a>
+                    </div>
+                    <!-- End Logo container-->
+
+
+                    <div class="menu-extras">
+
+                        <ul class="nav navbar-nav navbar-right pull-right">
+
+                            <li>
+                                <!-- Notification -->
+                                <div class="notification-box">
+                                    <ul class="list-inline m-b-0">
+                                        <li>
+                                            <a href="javascript:void(0);" class="right-bar-toggle">
+                                                <i class="zmdi zmdi-notifications-none"></i>
+                                            </a>
+                                            <div class="noti-dot">
+                                                <span class="dot"></span>
+                                                <span class="pulse"></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- End Notification bar -->
+                            </li>
+
+                            <li class="dropdown user-box">
+                                <a href="" class="dropdown-toggle waves-effect waves-light profile " data-toggle="dropdown" aria-expanded="true">
+                                    <img src="images/users/avatar-1.jpg" alt="user-img" class="img-circle user-img">
+                                    <div class="user-status away"><i class="zmdi zmdi-dot-circle"></i></div>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="javascript:void(0)"><i class="ti-user m-r-5"></i> Profile</a></li>
+                                    <li><a href="../LandingApp/index.html"><i class="ti-power-off m-r-5"></i> Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="menu-item">
+                            <!-- Mobile menu toggle-->
+                            <a class="navbar-toggle">
+                                <div class="lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </a>
+                            <!-- End mobile menu toggle-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="navbar-custom">
+                <div class="container">
+                    <div id="navigation">
+                        <!-- Navigation Menu-->
+                        <ul class="navigation-menu">
+                            <li>
+                                <a href="index.html"><i class="zmdi zmdi-view-dashboard"></i> <span> Dashboard</span></a>
+                            </li>
+                            <li>
+                                <a href="subject-performance.html"><i class="zmdi zmdi-chart"></i> <span> Subject Performance</span></a>
+                            </li>
+                            <li class="active">
+                                <a class="active"><i class="zmdi zmdi-assignment-check"></i> <span> Attendance & Behaviour </span></a>
+                            </li>
+                            <li>
+                                <a href="teacher-effectiveness.html"><i class="zmdi zmdi-spellcheck"></i> <span> Teacher Effectiveness </span> </a>
+                            </li>
+                            <li>
+                                <a href="system-usage.html"><i class="zmdi zmdi-wrench"></i> <span> System Usage </span> </a>
+                            </li>
+                        </ul>
+                        <!-- End navigation menu  -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End Navigation Bar-->
+
+
+        <div class="wrapper">
+            <div class="container">
+
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="btn-group pull-right m-t-15">
+                            <button type="button" class="btn btn-custom waves-effect waves-light">Filter <span class="m-l-5"><i class="fa fa-filter"></i></span></button>
+                        </div>
+                        <h4 class="page-title">Riverdale Primary School</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card-box">
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle card-drop" data-toggle="dropdown"
+                                   aria-expanded="false">
+                                    <i class="zmdi zmdi-more-vert"></i>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Last 4 Weeks <i class="zmdi zmdi-check"></i></a></li>
+                                    <li><a href="#">Last 8 Weeks</a></li>
+                                    <li><a href="#">Year To Date</a></li>
+                                </ul>
+                            </div>
+                            <h4 class="header-title m-t-0">Daily Attendance Rate</h4>
+                            <p>Percentage of students in attendance during the given time frame, with
+                                comparison to the threshold.</p>
+                            <div id="daily-attendance-rate" style="height: 280px;"></div>
+                            <ul class="list-inline chart-detail-list m-b-0 text-center">
+                                <li>
+                                    <h5 style="color: #FF4136"><i class="fa fa-circle m-r-5"></i>Threshold: 95%</h5>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card-box">
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle card-drop" data-toggle="dropdown"
+                                   aria-expanded="false">
+                                    <i class="zmdi zmdi-more-vert"></i>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Current Term <i class="zmdi zmdi-check"></i></a></li>
+                                    <li><a href="#">Current Academic Year</a></li>
+                                </ul>
+                            </div>
+                            <h4 class="header-title m-t-0">Average Daily Attendance</h4>
+                            <p>The average daily attendance for all students with membership on campus
+                                during the given time frame</p>
+                            <div id="average-daily-attendance" style="height: 280px;"></div>
+                            <ul class="list-inline chart-detail-list m-b-0 text-center">
+                                <li>
+                                    <h5 style="color: #2ECC40;"><i class="fa fa-circle m-r-5"></i>Above threshold</h5>
+                                </li>
+                                <li>
+                                    <h5 style="color: #FF4136"><i class="fa fa-circle m-r-5"></i>Below threshold</h5>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card-box">
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle card-drop" data-toggle="dropdown"
+                                   aria-expanded="false">
+                                    <i class="zmdi zmdi-more-vert"></i>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Last 4 Weeks <i class="zmdi zmdi-check"></i></a></li>
+                                    <li><a href="#">Last 8 Weeks</a></li>
+                                    <li><a href="#">Year To Date</a></li>
+                                </ul>
+                            </div>
+                            <h4 class="header-title m-t-0">Tardy Rate</h4>
+                            <p>Percentage of students tardy during the given time frame, with comparison to the school threshold.</p>
+                            <div id="tardy-rate" style="height: 280px;"></div>
+                            <ul class="list-inline chart-detail-list m-b-0 text-center">
+                                <li>
+                                    <h5 style="color: #2ECC40;"><i class="fa fa-circle m-r-5"></i>Below threshold</h5>
+                                </li>
+                                <li>
+                                    <h5 style="color: #FF4136"><i class="fa fa-circle m-r-5"></i>Above threshold</h5>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card-box">
+                            <h4 class="header-title m-t-0">Days Absent</h4>
+                            <p class="m-b-20">The percentage of students with 8 or more absences year to date, with comparison to the school threshold</p>
+                            <div data-plugin="circliful" class="circliful-chart" data-dimension="300"
+                                 data-text="12%" data-info="Over Threshold of 10%" data-width="30" data-fontsize="24"
+                                 data-percent="12" data-fgcolor="#ff5b5b" data-bgcolor="#ebeff2" data-type="half"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card-box">
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle card-drop" data-toggle="dropdown"
+                                   aria-expanded="false">
+                                    <i class="zmdi zmdi-more-vert"></i>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Last 4 Weeks <i class="zmdi zmdi-check"></i></a></li>
+                                    <li><a href="#">Last 8 Weeks</a></li>
+                                    <li><a href="#">Year To Date</a></li>
+                                </ul>
+                            </div>
+                            <h4 class="header-title m-t-0">Class Period Absence Rate</h4>
+                            <p>Percentage of students missing two or more class periods during the given time frame, with comparison to the school threshold</p>
+                            <div id="class-period-absence-rate" style="height: 280px;"></div>
+                            <ul class="list-inline chart-detail-list m-b-0 text-center">
+                                <li>
+                                    <h5 style="color: #FF4136"><i class="fa fa-circle m-r-5"></i>Threshold: 10%</h5>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-box">
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle card-drop" data-toggle="dropdown"
+                                   aria-expanded="false">
+                                    <i class="zmdi zmdi-more-vert"></i>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Current Term <i class="zmdi zmdi-check"></i></a></li>
+                                    <li><a href="#">Previous Term</a></li>
+                                    <li><a href="#">Year To Date</a></li>
+                                    <li><a href="#">Last Year</a></li>
+                                </ul>
+                            </div>
+                            <h4 class="header-title m-t-0">Discipline Incidents</h4>
+                            <p class="m-b-30">Percentage of students with one or more incidents
+                                within a given time frame.</p>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <p><strong>School Code of Conduct Infringements</strong></p>
+                                    <div id="code-of-conduct" style="height: 280px;"></div>
+                                    <ul class="list-inline chart-detail-list m-b-0 text-center">
+                                        <li>
+                                            <h5 style="color: #2ECC40;"><i class="fa fa-circle m-r-5"></i>Below threshold</h5>
+                                        </li>
+                                        <li>
+                                            <h5 style="color: #FF4136"><i class="fa fa-circle m-r-5"></i>Above threshold</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6 verticalLine">
+                                    <p><strong>Law Enforcement Violations</strong></p>
+                                    <div id="law-enforcement" style="height: 280px;"></div>
+                                    <ul class="list-inline chart-detail-list m-b-0 text-center">
+                                        <li>
+                                            <h5 style="color: #2ECC40;"><i class="fa fa-circle m-r-5"></i>Below threshold</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <footer class="footer text-right">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                2016 © Adminto.
+                            </div>
+                            <div class="col-xs-6">
+                                <ul class="pull-right list-inline m-b-0">
+                                    <li>
+                                        <a href="#">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Help</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End Footer -->
+
+            </div>
+            <!-- end container -->
+
+
+
+            <!-- Right Sidebar -->
+            <div class="side-bar right-bar">
+                <a href="javascript:void(0);" class="right-bar-toggle">
+                    <i class="zmdi zmdi-close-circle-o"></i>
+                </a>
+                <h4 class="">Notifications</h4>
+                <div class="notification-list nicescroll">
+                    <ul class="list-group list-no-border user-list">
+                        <li class="list-group-item">
+                            <a href="#" class="user-list-item">
+                                <div class="avatar">
+                                    <img src="images/users/avatar-2.jpg" alt="">
+                                </div>
+                                <div class="user-desc">
+                                    <span class="name">Michael Zenaty</span>
+                                    <span class="desc">There are new settings available</span>
+                                    <span class="time">2 hours ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" class="user-list-item">
+                                <div class="icon bg-info">
+                                    <i class="zmdi zmdi-account"></i>
+                                </div>
+                                <div class="user-desc">
+                                    <span class="name">New Signup</span>
+                                    <span class="desc">There are new settings available</span>
+                                    <span class="time">5 hours ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" class="user-list-item">
+                                <div class="icon bg-pink">
+                                    <i class="zmdi zmdi-comment"></i>
+                                </div>
+                                <div class="user-desc">
+                                    <span class="name">New Message received</span>
+                                    <span class="desc">There are new settings available</span>
+                                    <span class="time">1 day ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item active">
+                            <a href="#" class="user-list-item">
+                                <div class="avatar">
+                                    <img src="images/users/avatar-3.jpg" alt="">
+                                </div>
+                                <div class="user-desc">
+                                    <span class="name">James Anderson</span>
+                                    <span class="desc">There are new settings available</span>
+                                    <span class="time">2 days ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item active">
+                            <a href="#" class="user-list-item">
+                                <div class="icon bg-warning">
+                                    <i class="zmdi zmdi-settings"></i>
+                                </div>
+                                <div class="user-desc">
+                                    <span class="name">Settings</span>
+                                    <span class="desc">There are new settings available</span>
+                                    <span class="time">1 day ago</span>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <!-- /Right-bar -->
+
+        </div>
+
+
+
+        <!-- jQuery  -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/detect.js"></script>
+        <script src="js/fastclick.js"></script>
+
+        <script src="js/jquery.slimscroll.js"></script>
+        <script src="js/jquery.blockUI.js"></script>
+        <script src="js/waves.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/jquery.nicescroll.js"></script>
+        <script src="js/jquery.scrollTo.min.js"></script>
+
+
+        <!-- Circliful -->
+        <script src="plugins/jquery-circliful/js/jquery.circliful.min.js"></script>
+
+        <!--Morris Chart-->
+		<script src="plugins/morris/morris.min.js"></script>
+		<script src="plugins/raphael/raphael-min.js"></script>
+
+        <!-- Dashboard init -->
+        <script src="js/attendance-behaviour.js"></script>
+
+        <!-- App js -->
+        <script src="js/jquery.core.js"></script>
+        <script src="js/jquery.app.js"></script>
+
+    </body>
+</html>

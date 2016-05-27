@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A fully featured school management platform">
+        <meta name="author" content="Acada Plus +">
+
+        <link rel="shortcut icon" href="images/favicon.ico">
+
+        <title>Acada+ - School Management Platform</title>
+
+        <!-- DataTables -->
+        <link href="plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+        <link href="plugins/datatables/buttons.bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="plugins/datatables/fixedHeader.bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="plugins/datatables/responsive.bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="plugins/datatables/scroller.bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/core.css" rel="stylesheet" type="text/css" />
+        <link href="css/components.css" rel="stylesheet" type="text/css" />
+        <link href="css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="css/menu.css" rel="stylesheet" type="text/css" />
+        <link href="css/responsive.css" rel="stylesheet" type="text/css" />
+
+        <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="js/modernizr.min.js"></script>
+
+
+    </head>
+
+
+    <body>
+
+        <!-- Navigation Bar-->
+        <header id="topnav">
+            <div class="topbar-main">
+                <div class="container">
+
+                    <!-- LOGO -->
+                    <div class="topbar-left">
+                        <a href="../LandingApp/landing-page.html" class="logo"><span> acada<span>+</span></span></a>
+                    </div>
+                    <!-- End Logo container-->
+
+
+                    <div class="menu-extras">
+
+                        <ul class="nav navbar-nav navbar-right pull-right">
+
+                            <li>
+                                <!-- Notification -->
+                                <div class="notification-box">
+                                    <ul class="list-inline m-b-0">
+                                        <li>
+                                            <a href="javascript:void(0);" class="right-bar-toggle">
+                                                <i class="zmdi zmdi-notifications-none"></i>
+                                            </a>
+                                            <div class="noti-dot">
+                                                <span class="dot"></span>
+                                                <span class="pulse"></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- End Notification bar -->
+                            </li>
+
+                            <li class="dropdown user-box">
+                                <a href="" class="dropdown-toggle waves-effect waves-light profile " data-toggle="dropdown" aria-expanded="true">
+                                    <img src="images/users/avatar-1.jpg" alt="user-img" class="img-circle user-img">
+                                    <div class="user-status away"><i class="zmdi zmdi-dot-circle"></i></div>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="javascript:void(0)"><i class="ti-user m-r-5"></i> Profile</a></li>
+                                    <li><a href="../LandingApp/index.html"><i class="ti-power-off m-r-5"></i> Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="menu-item">
+                            <!-- Mobile menu toggle-->
+                            <a class="navbar-toggle">
+                                <div class="lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </a>
+                            <!-- End mobile menu toggle-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="navbar-custom">
+                <div class="container">
+                    <div id="navigation">
+                        <!-- Navigation Menu-->
+                        <ul class="navigation-menu">
+                            <li>
+                                <a href="index.html"><i class="zmdi zmdi-view-dashboard"></i> <span> Dashboard</span></a>
+                            </li>
+                            <li>
+                                <a href="subject-performance.html"><i class="zmdi zmdi-chart"></i> <span> Subject Performance</span></a>
+                            </li>
+                            <li>
+                                <a href="attendance-behaviour.html"><i class="zmdi zmdi-assignment-check"></i> <span> Attendance & Behaviour </span></a>
+                            </li>
+                            <li>
+                                <a href="teacher-effectiveness.html"><i class="zmdi zmdi-spellcheck"></i> <span> Teacher Effectiveness </span> </a>
+                            </li>
+                            <li class="active">
+                                <a class="active"><i class="zmdi zmdi-wrench"></i> <span> System Usage </span> </a>
+                            </li>
+                        </ul>
+                        <!-- End navigation menu  -->
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End Navigation Bar-->
+
+
+        <div class="wrapper">
+            <div class="container">
+
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h4 class="page-title">Riverdale Primary School</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card-box widget-user">
+                            <div class="text-center">
+                                <h2 class="text-custom" data-plugin="counterup">345</h2>
+                                <h4><i class="zmdi zmdi-key"></i> Logins </h4>
+                                <p>Total number of unique logins <br> <small>(Last 30 days)</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card-box widget-user">
+                            <div class="text-center">
+                                <h2 class="text-custom" data-plugin="counterup">65%</h2>
+                                <h4><i class="zmdi zmdi-refresh-sync"></i> Consistency </h4>
+                                <p>Percentage of weeks with at least one login <br> <small>(Year to date)</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card-box widget-user">
+                            <div class="text-center">
+                                <h2 class="text-custom" data-plugin="counterup">47</h2>
+                                <h4><i class="zmdi zmdi-accounts"></i> Active Users </h4>
+                                <p>Total number of active users in the school <br> <small>(As of today)</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card-box widget-user">
+                            <div class="text-center">
+                                <h2 class="text-custom" data-plugin="counterup">72%</h2>
+                                <h4><i class="zmdi zmdi-trending-up"></i> Uptake </h4>
+                                <p>Active users / Potential users within the school <br> <small>(As of today)</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card-box widget-user">
+                            <div class="text-center">
+                                <h2 class="text-custom" data-plugin="counterup">1329</h2>
+                                <h4><i class="zmdi zmdi-view-web"></i> Page Views </h4>
+                                <p>Total number of unique page views accessed <br> <small>(Last 30 days)</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card-box widget-user">
+                            <div class="text-center">
+                                <h2 class="text-custom" data-plugin="counterup">132 Hrs 45 Mins</h2>
+                                <h4><i class="zmdi zmdi-time"></i> Session Time </h4>
+                                <p>Toyal amount of time logged into the system <br> <small>(Last 30 days)</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card-box widget-user">
+                            <div class="text-center">
+                                <h2 class="text-custom" data-plugin="counterup">22%</h2>
+                                <h4><i class="zmdi zmdi-male-female"></i> Parent Engagement </h4>
+                                <p>Percentage of students whose parents log in consistently <br> <small>(Year to date)</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card-box widget-user">
+                            <div class="text-center">
+                                <h2 class="text-custom" data-plugin="counterup">100%</h2>
+                                <h4><i class="zmdi zmdi-cloud-done"></i> System Availability </h4>
+                                <p>Percentage of time Acada+ is available online <br> <small>(Last 30 days)</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card-box widget-user">
+                            <h4 class="header-title m-t-0 m-b-10">Application Usage</h4>
+                            <p class="text-muted font-13 m-b-25">
+                                Usage statistics for each application in your subscription package (Last 30 days)
+                            </p>
+                            <div class="table-responsive">
+                                <table class="table m-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Applications</th>
+                                            <th class="col-lg-1">Unique&nbsp;Logins</th>
+                                            <th class="col-lg-1">Active&nbsp;Users</th>
+                                            <th class="col-lg-1">Page&nbsp;Views</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Parent Portal</td>
+                                            <td class="text-center">995</td>
+                                            <td class="text-center">234</td>
+                                            <td class="text-center">1235</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Enrollment</td>
+                                            <td class="text-center">45</td>
+                                            <td class="text-center">5</td>
+                                            <td class="text-center">123</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Attendance</td>
+                                            <td class="text-center">317</td>
+                                            <td class="text-center">19</td>
+                                            <td class="text-center">756</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gradebook</td>
+                                            <td class="text-center">145</td>
+                                            <td class="text-center">18</td>
+                                            <td class="text-center">419</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Analytics</td>
+                                            <td class="text-center">13</td>
+                                            <td class="text-center">2</td>
+                                            <td class="text-center">51</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Messages</td>
+                                            <td class="text-center">92</td>
+                                            <td class="text-center">23</td>
+                                            <td class="text-center">3542</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Report Cards</td>
+                                            <td class="text-center">76</td>
+                                            <td class="text-center">15</td>
+                                            <td class="text-center">112</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Configuration</td>
+                                            <td class="text-center">7</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">13</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="card-box table-responsive">
+                            <h4 class="header-title m-t-0 m-b-10">Employee Usage</h4>
+                            <p class="text-muted font-13 m-b-25">
+                                Usage statistics for each of your employees (Last 30 days)
+                            </p>
+                            <table id="datatable-buttons" class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th class="col-lg-1 text-center">Role</th>
+                                        <th class="col-lg-1 text-center">Logins</th>
+                                        <th class="col-lg-1 text-center">Consistency</th>
+                                        <th class="col-lg-1 text-center">Session&nbsp;Time</th>
+                                        <th class="col-lg-1 text-center">Page&nbsp;Views</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Ibrahim Abdulai</td>
+                                        <td class="text-center">Teacher</td>
+                                        <td class="text-center">71</td>
+                                        <td class="text-center">52%</td>
+                                        <td class="text-center">2 Hrs 18 Mins</td>
+                                        <td class="text-center">315</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Abiola Adebisi</td>
+                                        <td class="text-center">Teacher</td>
+                                        <td class="text-center">59</td>
+                                        <td class="text-center">45%</td>
+                                        <td class="text-center">3 Hrs 52 Mins</td>
+                                        <td class="text-center">120</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sanda Adetutu</td>
+                                        <td class="text-center">School&nbsp;Administrator</td>
+                                        <td class="text-center">131</td>
+                                        <td class="text-center">87%</td>
+                                        <td class="text-center">5 Hrs 01 Mins</td>
+                                        <td class="text-center">425</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sanusi Afeesat Atanda</td>
+                                        <td class="text-center">Teacher</td>
+                                        <td class="text-center">98</td>
+                                        <td class="text-center">79%</td>
+                                        <td class="text-center">5 Hrs 31 Mins</td>
+                                        <td class="text-center">432</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Busayo Basirat</td>
+                                        <td class="text-center">Teacher</td>
+                                        <td class="text-center">78</td>
+                                        <td class="text-center">73%</td>
+                                        <td class="text-center">4 Hrs 24 Mins</td>
+                                        <td class="text-center">407</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Catherine Uwanna</td>
+                                        <td class="text-center">Teacher</td>
+                                        <td class="text-center">5</td>
+                                        <td class="text-center">12%</td>
+                                        <td class="text-center">0 Hrs 35 Mins</td>
+                                        <td class="text-center">23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chinedum Orakwusi</td>
+                                        <td class="text-center">School&nbsp;Administrator</td>
+                                        <td class="text-center">41</td>
+                                        <td class="text-center">49%</td>
+                                        <td class="text-center">3 Hrs 42 Mins</td>
+                                        <td class="text-center">97</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dipo Abiiba</td>
+                                        <td class="text-center">System&nbsp;Manager</td>
+                                        <td class="text-center">33</td>
+                                        <td class="text-center">47%</td>
+                                        <td class="text-center">0 Hrs 49 Mins</td>
+                                        <td class="text-center">75</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nonso Abu</td>
+                                        <td class="text-center">Teacher</td>
+                                        <td class="text-center">43</td>
+                                        <td class="text-center">32%</td>
+                                        <td class="text-center">1 Hr 35 Mins</td>
+                                        <td class="text-center">118</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alade Oyewole</td>
+                                        <td class="text-center">Teacher</td>
+                                        <td class="text-center">23</td>
+                                        <td class="text-center">55%</td>
+                                        <td class="text-center">2 Hrs 05 Mins</td>
+                                        <td class="text-center">234</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aziken Egbe</td>
+                                        <td class="text-center">Teacher</td>
+                                        <td class="text-center">35</td>
+                                        <td class="text-center">51%</td>
+                                        <td class="text-center">1 Hr 13 Mins</td>
+                                        <td class="text-center">167</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ayonimofe Oladunjoye</td>
+                                        <td class="text-center">Teacher</td>
+                                        <td class="text-center">13</td>
+                                        <td class="text-center">63%</td>
+                                        <td class="text-center">0 Hrs 58 Mins</td>
+                                        <td class="text-center">99</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Footer -->
+                <footer class="footer text-right">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                2016 © Adminto.
+                            </div>
+                            <div class="col-xs-6">
+                                <ul class="pull-right list-inline m-b-0">
+                                    <li>
+                                        <a href="#">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Help</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End Footer -->
+
+            </div>
+            <!-- end container -->
+
+
+
+            <!-- Right Sidebar -->
+            <div class="side-bar right-bar">
+                <a href="javascript:void(0);" class="right-bar-toggle">
+                    <i class="zmdi zmdi-close-circle-o"></i>
+                </a>
+                <h4 class="">Notifications</h4>
+                <div class="notification-list nicescroll">
+                    <ul class="list-group list-no-border user-list">
+                        <li class="list-group-item">
+                            <a href="#" class="user-list-item">
+                                <div class="avatar">
+                                    <img src="images/users/avatar-2.jpg" alt="">
+                                </div>
+                                <div class="user-desc">
+                                    <span class="name">Michael Zenaty</span>
+                                    <span class="desc">There are new settings available</span>
+                                    <span class="time">2 hours ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" class="user-list-item">
+                                <div class="icon bg-info">
+                                    <i class="zmdi zmdi-account"></i>
+                                </div>
+                                <div class="user-desc">
+                                    <span class="name">New Signup</span>
+                                    <span class="desc">There are new settings available</span>
+                                    <span class="time">5 hours ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" class="user-list-item">
+                                <div class="icon bg-pink">
+                                    <i class="zmdi zmdi-comment"></i>
+                                </div>
+                                <div class="user-desc">
+                                    <span class="name">New Message received</span>
+                                    <span class="desc">There are new settings available</span>
+                                    <span class="time">1 day ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item active">
+                            <a href="#" class="user-list-item">
+                                <div class="avatar">
+                                    <img src="images/users/avatar-3.jpg" alt="">
+                                </div>
+                                <div class="user-desc">
+                                    <span class="name">James Anderson</span>
+                                    <span class="desc">There are new settings available</span>
+                                    <span class="time">2 days ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item active">
+                            <a href="#" class="user-list-item">
+                                <div class="icon bg-warning">
+                                    <i class="zmdi zmdi-settings"></i>
+                                </div>
+                                <div class="user-desc">
+                                    <span class="name">Settings</span>
+                                    <span class="desc">There are new settings available</span>
+                                    <span class="time">1 day ago</span>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <!-- /Right-bar -->
+
+        </div>
+
+
+
+        <!-- jQuery  -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/detect.js"></script>
+        <script src="js/fastclick.js"></script>
+        <script src="js/jquery.slimscroll.js"></script>
+        <script src="js/jquery.blockUI.js"></script>
+        <script src="js/waves.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/jquery.nicescroll.js"></script>
+        <script src="js/jquery.scrollTo.min.js"></script>
+
+        <!-- Datatables-->
+        <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="plugins/datatables/dataTables.bootstrap.js"></script>
+        <script src="plugins/datatables/dataTables.buttons.min.js"></script>
+        <script src="plugins/datatables/buttons.bootstrap.min.js"></script>
+        <script src="plugins/datatables/jszip.min.js"></script>
+        <script src="plugins/datatables/pdfmake.min.js"></script>
+        <script src="plugins/datatables/vfs_fonts.js"></script>
+        <script src="plugins/datatables/buttons.html5.min.js"></script>
+        <script src="plugins/datatables/buttons.print.min.js"></script>
+        <script src="plugins/datatables/dataTables.fixedHeader.min.js"></script>
+        <script src="plugins/datatables/dataTables.keyTable.min.js"></script>
+        <script src="plugins/datatables/dataTables.responsive.min.js"></script>
+        <script src="plugins/datatables/responsive.bootstrap.min.js"></script>
+        <script src="plugins/datatables/dataTables.scroller.min.js"></script>
+
+        <!-- Dashboard init -->
+        <script src="js/system-usage.js"></script>
+
+        <!-- App js -->
+        <script src="js/jquery.core.js"></script>
+        <script src="js/jquery.app.js"></script>
+
+        <script type="text/javascript">
+            TableManageButtons.init();
+        </script>
+
+    </body>
+</html>
