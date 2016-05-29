@@ -17,7 +17,7 @@
 			dialog: {
 				wrapper: '#dialog',
 				cancelButton: '#dialogCancel',
-				confirmButton: '#dialogConfirm',
+				confirmButton: '#dialogConfirm'
 			}
 		},
 

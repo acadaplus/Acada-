@@ -1,6 +1,6 @@
 
 
 jQuery(document).ready(function($) {
-    $('#attendance-table').DataTable();
+    $('#gradebook-table').DataTable();
 
 });

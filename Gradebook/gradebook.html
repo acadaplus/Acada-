@@ -10,8 +10,7 @@
 
         <title>Acada+ - School Management Platform</title>
 
-        <!-- Circlifull chart css -->
-        <link href="../Common/plugins/jquery-circliful/css/jquery.circliful.css" rel="stylesheet" type="text/css"/>
+        <link href="../Common/plugins/switchery/switchery.min.css" rel="stylesheet" />
 
         <link href="../Common/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="../Common/css/core.css" rel="stylesheet" type="text/css" />
@@ -31,38 +30,37 @@
         <script src="../Common/js/modernizr.min.js"></script>
 
         <style>
-            #attendance-table, #take-attendance-table, #edit-attendance-table {
+            #gradebook-table, #grade-assignment-table, #edit-assignment-table {
                 font-size: 11px;
             }
-            #attendance-table th, #take-attendance-table th, #edit-attendance-table th {
+            #gradebook-table th, #grade-assignment-table th, #edit-assignment-table th {
                 border: 1px solid black;
                 border-bottom: none;
                 text-align: center;
             }
-            #attendance-table th:first-child, #take-attendance-table th:first-child, #edit-attendance-table th:first-child {
+            #gradebook-table th:first-child, #grade-assignment-table th:first-child, #edit-assignment-table th:first-child {
                 border: none;
                 text-align: left;
             }
-            #attendance-table td, #take-attendance-table td, #edit-attendance-table td {
+            #gradebook-table td, #grade-assignment-table td, #edit-assignment-table td {
                 border: 1px solid black;
                 border-bottom: none;
                 text-align: center;
                 vertical-align: middle;
             }
-            #attendance-table td:first-child, #take-attendance-table td:first-child, #edit-attendance-table td:first-child {
+            #gradebook-table td:first-child, #grade-assignment-table td:first-child, #edit-assignment-table td:first-child {
                 text-align: left;
             }
-            #attendance-table img, #take-attendance-table img{
+            #gradebook-table img, #grade-assignment-table img{
                 height: 24px;
                 width: 24px;
             }
-            #attendance-table i, #take-attendance-table i{
+            #gradebook-table i, #grade-assignment-table i{
                 margin-top: 5px;
             }
-            #attendance-table tr:last-child > td, #take-attendance-table tr:last-child > td, #edit-attendance-table tr:last-child > td  {
+            #gradebook-table tr:last-child > td, #grade-assignment-table tr:last-child > td, #edit-assignment-table tr:last-child > td  {
                 border-bottom: 1px solid black;
             }
-            .clickable { cursor: pointer; }
         </style>
 
 
@@ -137,10 +135,10 @@
                         <!-- Navigation Menu-->
                         <ul class="navigation-menu">
                             <li class="active">
-                                <a class="active"><i class="zmdi zmdi-assignment-check"></i> <span> Attendance Register </span> </a>
+                                <a class="active"><i class="zmdi zmdi-assignment-check"></i> <span> Gradebook </span> </a>
                             </li>
                             <li>
-                                <a href="attendance-register.html"><i class="zmdi zmdi-settings"></i> <span> Settings </span> </a>
+                                <a href="gradebook.html"><i class="zmdi zmdi-settings"></i> <span> Settings </span> </a>
                             </li>
                         </ul>
                         <!-- End navigation menu  -->
@@ -176,70 +174,71 @@
                     </div>
                 </div>
 
-
-                <div class="row">
-                    <div class="card-box">
-
-                        <h4 class="header-title m-t-0 m-b-10">Statistics</h4>
-                        <div class="row text-center">
-                            <div class="col-sm-6 col-lg-3 clickable" data-toggle="modal" data-target="#weekAttendanceModal">
-                                <div data-plugin="circliful" class="circliful-chart m-b-10" data-dimension="180"
-                                     data-text="95%" data-info="This Week" data-width="20" data-fontsize="24"
-                                     data-percent="95" data-fgcolor="#10c469" data-bgcolor="#ebeff2"
-                                     data-fill="#f4f8fb"></div>
-                                <h5 class="font-600 text-muted">Daily Attendance<br><small>3 Classes This Week</small></h5>
-                            </div>
-                            <div class="col-sm-6 col-lg-3 clickable" data-toggle="modal" data-target="#termAttendanceModal">
-                                <div data-plugin="circliful" class="circliful-chart m-b-10" data-dimension="180"
-                                     data-text="90%" data-info="This Term" data-width="20" data-fontsize="24"
-                                     data-percent="90" data-fgcolor="#71b6f9" data-bgcolor="#ebeff2"
-                                     data-fill="#f4f8fb"></div>
-                                <h5 class="font-600 text-muted">Daily Attendance<br><small>18 Classes This Term</small></h5>
-                            </div>
-                            <div class="col-sm-6 col-lg-3 clickable" data-toggle="modal" data-target="#chronicTardinessModal">
-                                <div data-plugin="circliful" class="circliful-chart m-b-10" data-dimension="180"
-                                     data-text="18%" data-info="This Term" data-width="20" data-fontsize="24"
-                                     data-percent="18" data-fgcolor="#f9c851" data-bgcolor="#ebeff2"
-                                     data-fill="#f4f8fb"></div>
-                                <h5 class="font-600 text-muted">Chronic Tardiness<br><small>Students With 5+ Tardies</small></h5>
-                            </div>
-                            <div class="col-sm-6 col-lg-3 clickable" data-toggle="modal" data-target="#chronicAbsenceModal">
-                                <div data-plugin="circliful" class="circliful-chart m-b-10" data-dimension="180"
-                                     data-text="3%" data-info="This Term" data-width="20" data-fontsize="24"
-                                     data-percent="3" data-fgcolor="#5b69bc" data-bgcolor="#ebeff2"
-                                     data-fill="#f4f8fb"></div>
-                                <h5 class="font-600 text-muted">Chronic Absence<br><small>Students With 3+ Absences</small></h5>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-
                 <div class="row">
                     <div class="card-box">
 
                         <div class="btn-group pull-right">
-                            <button type="button" class="btn btn-custom m-r-10" data-toggle="modal" data-target="#takeAttendanceModal">Take Attendance <span class="m-l-5"><i class="zmdi zmdi-assignment-check"></i></span></button>
-                            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Edit Attendance <span class="m-l-5"><i class="zmdi zmdi-edit"></i></span></button>
+                            <button type="button" class="btn btn-custom m-r-10" data-toggle="modal" data-target="#takeGradebookModal">Grade Assignment <span class="m-l-5"><i class="zmdi zmdi-assignment-check"></i></span></button>
+                            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Edit Grades <span class="m-l-5"><i class="zmdi zmdi-edit"></i></span></button>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="#" data-toggle="modal" data-target="#editAttendanceModal">June 6th, 2016</a></li>
-                                <li><a href="#" data-toggle="modal" data-target="#editAttendanceModal">June 8th, 2016</a></li>
-                                <li><a href="#" data-toggle="modal" data-target="#editAttendanceModal">June 10th, 2016</a></li>
-                                <li><a href="#" data-toggle="modal" data-target="#editAttendanceModal">June 13th, 2016</a></li>
-                                <li><a href="#" data-toggle="modal" data-target="#editAttendanceModal">June 15th, 2016</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#editGradebookModal">June 6th, 2016</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#editGradebookModal">June 8th, 2016</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#editGradebookModal">June 10th, 2016</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#editGradebookModal">June 13th, 2016</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#editGradebookModal">June 15th, 2016</a></li>
                             </ul>
                             </div>
 
-                        <h4 class="header-title m-t-0 m-b-30">Attendance Register</h4>
+                        <h4 class="header-title m-t-0 m-b-30">Gradebook</h4>
 
                         <div class="table-responsive">
-                            <table class="table table-bordered" id="attendance-table" style="border: none">
+                            <table class="table table-bordered" id="gradebook-table" style="border: none">
                                 <thead>
                                     <tr>
-                                        <th class="col-md-3">Students</th>
+                                        <th></th>
                                         <th>06/06</th>
+                                        <th>08/06</th>
+                                        <th>10/06</th>
+                                        <th>13/06</th>
+                                        <th>15/06</th>
+                                        <th>17/06</th>
+                                        <th>20/06</th>
+                                        <th>22/06</th>
+                                        <th>24/06</th>
+                                        <th>27/06</th>
+                                        <th>29/06</th>
+                                        <th>01/07</th>
+                                        <th>04/07</th>
+                                        <th>06/07</th>
+                                        <th>08/07</th>
+                                        <th>11/07</th>
+                                        <th>13/07</th>
+                                        <th>15/07</th>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th>06/06</th>
+                                        <th>08/06</th>
+                                        <th>10/06</th>
+                                        <th>13/06</th>
+                                        <th>15/06</th>
+                                        <th>17/06</th>
+                                        <th>20/06</th>
+                                        <th>22/06</th>
+                                        <th>24/06</th>
+                                        <th>27/06</th>
+                                        <th>29/06</th>
+                                        <th>01/07</th>
+                                        <th>04/07</th>
+                                        <th>06/07</th>
+                                        <th>08/07</th>
+                                        <th>11/07</th>
+                                        <th>13/07</th>
+                                        <th>15/07</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-md-3">Students</th>
+                                        <th><input type="checkbox" checked data-plugin="switchery" data-color="#00b19d" data-size="small"/></th>
                                         <th>08/06</th>
                                         <th>10/06</th>
                                         <th>13/06</th>
@@ -402,198 +401,12 @@
 
 
          <!-- Modal -->
-        <div id="chronicAbsenceModal" class="modal fade" tabindex="-1" role="dialog">
+        <div id="takeGradebookModal" class="modal fade" tabindex="-1" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">Chronic Absence</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>The following students have been absent 5 or more times this term</p>
-                        <ul class="list-group m-b-0 user-list">
-                            <li class="list-group-item">
-                                <a href="#" class="user-list-item">
-                                    <div class="avatar">
-                                        <img src="../Common/images/users/avatar-2.jpg" alt="">
-                                    </div>
-                                    <div class="user-desc">
-                                        <span class="name">James Obioha</span>
-                                        <span class="desc"><span class="text-danger">7 Absences</span> | <span class="text-warning">11 Tardies</span></span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="#" class="user-list-item">
-                                    <div class="avatar">
-                                        <img src="../Common/images/users/avatar-1.jpg" alt="">
-                                    </div>
-                                    <div class="user-desc">
-                                        <span class="name">Ngozi Amechi</span>
-                                        <span class="desc"><span class="text-danger">5 Absences</span> | <span class="text-warning">6 Tardies</span></span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="#" class="user-list-item">
-                                    <div class="avatar">
-                                        <img src="../Common/images/users/avatar-6.jpg" alt="">
-                                    </div>
-                                    <div class="user-desc">
-                                        <span class="name">Ade Beckley</span>
-                                        <span class="desc"><span class="text-danger">5 Absences</span> | <span class="text-warning">3 Tardies</span></span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="chronicTardinessModal" class="modal fade" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">Chronic Tardiness</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>The following students have been tardy 3 or more times this term</p>
-                        <ul class="list-group m-b-0 user-list">
-                            <li class="list-group-item">
-                                <a href="#" class="user-list-item">
-                                    <div class="avatar">
-                                        <img src="../Common/images/users/avatar-2.jpg" alt="">
-                                    </div>
-                                    <div class="user-desc">
-                                        <span class="name">James Obioha</span>
-                                        <span class="desc"><span class="text-danger">7 Absences</span> | <span class="text-warning">11 Tardies</span></span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="#" class="user-list-item">
-                                    <div class="avatar">
-                                        <img src="../Common/images/users/avatar-1.jpg" alt="">
-                                    </div>
-                                    <div class="user-desc">
-                                        <span class="name">Ngozi Amechi</span>
-                                        <span class="desc"><span class="text-danger">5 Absences</span> | <span class="text-warning">6 Tardies</span></span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="#" class="user-list-item">
-                                    <div class="avatar">
-                                        <img src="../Common/images/users/avatar-6.jpg" alt="">
-                                    </div>
-                                    <div class="user-desc">
-                                        <span class="name">Ade Beckley</span>
-                                        <span class="desc"><span class="text-danger">5 Absences</span> | <span class="text-warning">3 Tardies</span></span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="#" class="user-list-item">
-                                    <div class="avatar">
-                                        <img src="../Common/images/users/avatar-5.jpg" alt="">
-                                    </div>
-                                    <div class="user-desc">
-                                        <span class="name">Ndidi Spiro</span>
-                                        <span class="desc"><span class="text-danger">3 Absences</span> | <span class="text-warning">3 Tardies</span></span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="#" class="user-list-item">
-                                    <div class="avatar">
-                                        <img src="../Common/images/users/avatar-7.jpg" alt="">
-                                    </div>
-                                    <div class="user-desc">
-                                        <span class="name">Ibrahim Madu</span>
-                                        <span class="desc"><span class="text-danger">1 Absences</span> | <span class="text-warning">3 Tardies</span></span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="weekAttendanceModal" class="modal fade" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">Average Daily Attendance This Week : <span class="text-success">95%</span></h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>Over the past week, your students have achieved the following attendance rates</p>
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <span class="badge badge-success">93%</span>
-                                Monday, June 13th 2016
-                            </li>
-                            <li class="list-group-item">
-                                <span class="badge badge-success">97%</span>
-                                Wednesday, June 15th 2016
-                            </li>
-                            <li class="list-group-item">
-                                <span class="pull-right m-r-15"><i class="zmdi zmdi-window-minimize"></i></span>
-                                Friday, June 17th 2016
-                            </li>
-                        </ul>
-                        <p class="list-group-item"><strong>School Target:</strong> <span class="badge badge-success">90%</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="termAttendanceModal" class="modal fade" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">Average Daily Attendance This Term : <span class="text-success">90%</span></h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>This term, your students have achieved the following attendance rates</p>
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <span class="badge badge-danger">83%</span>
-                                Monday, June 6th 2016
-                            </li>
-                            <li class="list-group-item">
-                                <span class="badge badge-danger">87%</span>
-                                Wednesday, June 8th 2016
-                            </li>
-                            <li class="list-group-item">
-                                <span class="badge badge-success">90%</span>
-                                Friday, June 10th 2016
-                            </li>
-                            <li class="list-group-item">
-                                <span class="badge badge-success">93%</span>
-                                Monday, June 13th 2016
-                            </li>
-                            <li class="list-group-item">
-                                <span class="badge badge-success">97%</span>
-                                Wednesday, June 15th 2016
-                            </li>
-                            <li class="list-group-item">
-                                <span class="pull-right m-r-15"><i class="zmdi zmdi-window-minimize"></i></span>
-                                Friday, June 17th 2016
-                            </li>
-                        </ul>
-                        <p class="list-group-item"><strong>School Target:</strong> <span class="badge badge-success">90%</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="takeAttendanceModal" class="modal fade" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">Take Attendance</h4>
+                        <h4 class="modal-title">Grade Assignment</h4>
                     </div>
                     <div class="modal-body">
                         <div class="">
@@ -628,7 +441,7 @@
                         </div>
 
                         <div class="table-responsive">
-                            <table class="table table-bordered" id="take-attendance-table" style="border: none">
+                            <table class="table table-bordered" id="grade-assignment-table" style="border: none">
                                 <thead>
                                     <tr>
                                         <th style="width: 200px">Students</th>
@@ -671,12 +484,12 @@
                 </div>
             </div>
         </div>
-        <div id="editAttendanceModal" class="modal fade" tabindex="-1" role="dialog">
+        <div id="editGradebookModal" class="modal fade" tabindex="-1" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">Edit Attendance</h4>
+                        <h4 class="modal-title">Edit Grades</h4>
                     </div>
                     <div class="modal-body">
                         <div class="">
@@ -697,7 +510,7 @@
                         </div>
 
                         <div class="table-responsive">
-                            <table class="table table-bordered" id="edit-attendance-table" style="border: none">
+                            <table class="table table-bordered" id="edit-assignment-table" style="border: none">
                                 <thead>
                                 <tr>
                                     <th style="width: 200px">Students</th>
@@ -754,12 +567,10 @@
         <script src="../Common/js/wow.min.js"></script>
         <script src="../Common/js/jquery.nicescroll.js"></script>
         <script src="../Common/js/jquery.scrollTo.min.js"></script>
-
-        <!-- Circliful -->
-        <script src="../Common/plugins/jquery-circliful/js/jquery.circliful.min.js"></script>
+        <script src="../Common/plugins/switchery/switchery.min.js"></script>
 
         <!-- Page specific only -->
-        <script src="js/attendance-register.js"></script>
+        <script src="js/gradebook.js"></script>
 
         <!-- App js -->
         <script src="../Common/js/jquery.core.js"></script>
