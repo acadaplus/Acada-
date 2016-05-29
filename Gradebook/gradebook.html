@@ -61,6 +61,22 @@
             #gradebook-table tr:last-child > td, #grade-assignment-table tr:last-child > td, #edit-assignment-table tr:last-child > td  {
                 border-bottom: 1px solid black;
             }
+            #gradebook-table tr > td:last-child, #gradebook-table th:last-child, #gradebook-table th:nth-last-child(2), #gradebook-table th:nth-last-child(3) {
+                border: none;
+            }
+            .grade {
+                font-size: 16px;
+                display: block;
+                font-weight: 700;
+                text-align:center
+            }
+            .grade small {
+                font-size: 11px;
+                display: block;
+                font-weight: 200;
+                text-align:center;
+                color: #9398a0;
+            }
         </style>
 
 
@@ -181,11 +197,11 @@
                             <button type="button" class="btn btn-custom m-r-10" data-toggle="modal" data-target="#takeGradebookModal">Grade Assignment <span class="m-l-5"><i class="zmdi zmdi-assignment-check"></i></span></button>
                             <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Edit Grades <span class="m-l-5"><i class="zmdi zmdi-edit"></i></span></button>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="#" data-toggle="modal" data-target="#editGradebookModal">June 6th, 2016</a></li>
-                                <li><a href="#" data-toggle="modal" data-target="#editGradebookModal">June 8th, 2016</a></li>
-                                <li><a href="#" data-toggle="modal" data-target="#editGradebookModal">June 10th, 2016</a></li>
-                                <li><a href="#" data-toggle="modal" data-target="#editGradebookModal">June 13th, 2016</a></li>
-                                <li><a href="#" data-toggle="modal" data-target="#editGradebookModal">June 15th, 2016</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#editGradebookModal">Homework #1</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#editGradebookModal">Homework #2</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#editGradebookModal">Pop Quiz #1</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#editGradebookModal">Mid-Term Exams</a></li>
+                                <li><a href="#" data-toggle="modal" data-target="#editGradebookModal">Homework #3</a></li>
                             </ul>
                             </div>
 
@@ -196,66 +212,54 @@
                                 <thead>
                                     <tr>
                                         <th></th>
-                                        <th>06/06</th>
-                                        <th>08/06</th>
-                                        <th>10/06</th>
-                                        <th>13/06</th>
-                                        <th>15/06</th>
-                                        <th>17/06</th>
-                                        <th>20/06</th>
-                                        <th>22/06</th>
-                                        <th>24/06</th>
-                                        <th>27/06</th>
-                                        <th>29/06</th>
-                                        <th>01/07</th>
-                                        <th>04/07</th>
-                                        <th>06/07</th>
-                                        <th>08/07</th>
-                                        <th>11/07</th>
-                                        <th>13/07</th>
-                                        <th>15/07</th>
-                                    </tr>
-                                    <tr>
+                                        <th>Homework #1</th>
+                                        <th>Homework #2</th>
+                                        <th>Pop Quiz #1</th>
+                                        <th>Mid-Term Exams</th>
+                                        <th>Homework #3</th>
+                                        <th>Pop Quiz #2</th>
+                                        <th>Homework #4</th>
+                                        <th>Homework #5</th>
+                                        <th>Pop Quiz #3</th>
+                                        <th>Mock Exam</th>
+                                        <th>Final Exams</th>
                                         <th></th>
-                                        <th>06/06</th>
-                                        <th>08/06</th>
-                                        <th>10/06</th>
-                                        <th>13/06</th>
-                                        <th>15/06</th>
-                                        <th>17/06</th>
-                                        <th>20/06</th>
-                                        <th>22/06</th>
-                                        <th>24/06</th>
-                                        <th>27/06</th>
-                                        <th>29/06</th>
-                                        <th>01/07</th>
-                                        <th>04/07</th>
-                                        <th>06/07</th>
-                                        <th>08/07</th>
-                                        <th>11/07</th>
-                                        <th>13/07</th>
-                                        <th>15/07</th>
+                                        <th></th>
+                                        <th></th>
                                     </tr>
                                     <tr>
-                                        <th class="col-md-3">Students</th>
-                                        <th><input type="checkbox" checked data-plugin="switchery" data-color="#00b19d" data-size="small"/></th>
-                                        <th>08/06</th>
-                                        <th>10/06</th>
-                                        <th>13/06</th>
-                                        <th>15/06</th>
-                                        <th>17/06</th>
-                                        <th>20/06</th>
-                                        <th>22/06</th>
-                                        <th>24/06</th>
-                                        <th>27/06</th>
-                                        <th>29/06</th>
-                                        <th>01/07</th>
-                                        <th>04/07</th>
-                                        <th>06/07</th>
-                                        <th>08/07</th>
-                                        <th>11/07</th>
-                                        <th>13/07</th>
-                                        <th>15/07</th>
+                                        <th class="col-md-3"></th>
+                                        <th style="width: 70px">06/06</th>
+                                        <th style="width: 70px">08/06</th>
+                                        <th style="width: 70px">10/06</th>
+                                        <th style="width: 70px">13/06</th>
+                                        <th style="width: 70px">15/06</th>
+                                        <th style="width: 70px">17/06</th>
+                                        <th style="width: 70px">20/06</th>
+                                        <th style="width: 70px">22/06</th>
+                                        <th style="width: 70px">24/06</th>
+                                        <th style="width: 70px">27/06</th>
+                                        <th style="width: 70px">01/07</th>
+                                        <th style="width: 70px"></th>
+                                        <th style="width: 70px"></th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <th><div class="pull-right"><small>published</small></div> Students</th>
+                                        <th><input type="checkbox" id="check1" checked readonly data-plugin="switchery" data-color="#00b19d" data-size="small"/><label for="check1"></label></th>
+                                        <th><input type="checkbox" id="check2" checked readonly data-plugin="switchery" data-color="#00b19d" data-size="small"/><label for="check2"></label></th>
+                                        <th><input type="checkbox" id="check3" checked readonly data-plugin="switchery" data-color="#00b19d" data-size="small"/><label for="check3"></label></th>
+                                        <th><input type="checkbox" id="check4"  data-secondary-color="#ef5350" data-plugin="switchery" data-color="#00b19d" data-size="small"/><label for="check4"></label></th>
+                                        <th><input type="checkbox" id="check5"  data-secondary-color="#ef5350" data-plugin="switchery" data-color="#00b19d" data-size="small"/><label for="check5"></label></th>
+                                        <th><input type="checkbox" id="check6" readonly data-plugin="switchery" data-color="#00b19d" data-size="small"/><label for="check6"></label></th>
+                                        <th><input type="checkbox" id="check7" readonly data-plugin="switchery" data-color="#00b19d" data-size="small"/><label for="check7"></label></th>
+                                        <th><input type="checkbox" id="check8" readonly data-plugin="switchery" data-color="#00b19d" data-size="small"/><label for="check4"></label></th>
+                                        <th><input type="checkbox" id="check9" readonly data-plugin="switchery" data-color="#00b19d" data-size="small"/><label for="check5"></label></th>
+                                        <th><input type="checkbox" id="check10" readonly data-plugin="switchery" data-color="#00b19d" data-size="small"/><label for="check6"></label></th>
+                                        <th><input type="checkbox" id="check11" readonly data-plugin="switchery" data-color="#00b19d" data-size="small"/><label for="check7"></label></th>
+                                        <th>Grade</th>
+                                        <th>Rank</th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -265,24 +269,20 @@
                                             Ayodeji Mabogunje
                                             <i class="zmdi zmdi-email pull-right"></i>
                                         </td>
-                                        <td><i class="zmdi zmdi-check zmdi-hc-2x text-success"></i></td>
-                                        <td><i class="zmdi zmdi-check zmdi-hc-2x text-success"></i></td>
-                                        <td><i class="zmdi zmdi-check zmdi-hc-2x text-success"></i></td>
-                                        <td><i class="zmdi zmdi-check zmdi-hc-2x text-success"></i></td>
-                                        <td><i class="zmdi zmdi-check zmdi-hc-2x text-success"></i></td>
+                                        <td><span class="grade text-success text-center">A<br><small>(98%)</small></span></td>
+                                        <td><span class="grade text-success text-center">A<br><small>(90%)</small></span></td>
+                                        <td><span class="grade text-success text-center">B<br><small>(85%)</small></span></td>
+                                        <td><span class="grade text-warning text-center">C<br><small>(72%)</small></span></td>
+                                        <td><span class="grade text-success text-center">A<br><small>(91%)</small></span></td>
                                         <td><i class="zmdi zmdi-window-minimize"></i></td>
                                         <td><i class="zmdi zmdi-window-minimize"></i></td>
                                         <td><i class="zmdi zmdi-window-minimize"></i></td>
                                         <td><i class="zmdi zmdi-window-minimize"></i></td>
                                         <td><i class="zmdi zmdi-window-minimize"></i></td>
                                         <td><i class="zmdi zmdi-window-minimize"></i></td>
-                                        <td><i class="zmdi zmdi-window-minimize"></i></td>
-                                        <td><i class="zmdi zmdi-window-minimize"></i></td>
-                                        <td><i class="zmdi zmdi-window-minimize"></i></td>
-                                        <td><i class="zmdi zmdi-window-minimize"></i></td>
-                                        <td><i class="zmdi zmdi-window-minimize"></i></td>
-                                        <td><i class="zmdi zmdi-window-minimize"></i></td>
-                                        <td><i class="zmdi zmdi-window-minimize"></i></td>
+                                        <td><span class="grade text-success text-center">B<br><small>(87%)</small></span></td>
+                                        <td><span class="grade text-center">2<sup>nd</sup></span></td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -290,24 +290,20 @@
                                             Stephen Ovadje
                                             <i class="zmdi zmdi-email pull-right"></i>
                                         </td>
-                                        <td><i class="zmdi zmdi-check zmdi-hc-2x text-success"></i></td>
-                                        <td><i class="zmdi zmdi-check zmdi-hc-2x text-success"></i></td>
-                                        <td><i class="zmdi zmdi-check zmdi-hc-2x text-success"></i></td>
-                                        <td><i class="zmdi zmdi-close zmdi-hc-2x text-danger"></i></td>
-                                        <td><i class="zmdi zmdi-check zmdi-hc-2x text-warning"></i></td>
+                                        <td><span class="grade text-success text-center">A<br><small>(100%)</small></span></td>
+                                        <td><span class="grade text-success text-center">A<br><small>(95%)</small></span></td>
+                                        <td><span class="grade text-success text-center">A<br><small>(90%)</small></span></td>
+                                        <td><span class="grade text-success text-center">A<br><small>(98%)</small></span></td>
+                                        <td><span class="grade text-success text-center">B<br><small>(89%)</small></span></td>
                                         <td><i class="zmdi zmdi-window-minimize"></i></td>
                                         <td><i class="zmdi zmdi-window-minimize"></i></td>
                                         <td><i class="zmdi zmdi-window-minimize"></i></td>
                                         <td><i class="zmdi zmdi-window-minimize"></i></td>
                                         <td><i class="zmdi zmdi-window-minimize"></i></td>
                                         <td><i class="zmdi zmdi-window-minimize"></i></td>
-                                        <td><i class="zmdi zmdi-window-minimize"></i></td>
-                                        <td><i class="zmdi zmdi-window-minimize"></i></td>
-                                        <td><i class="zmdi zmdi-window-minimize"></i></td>
-                                        <td><i class="zmdi zmdi-window-minimize"></i></td>
-                                        <td><i class="zmdi zmdi-window-minimize"></i></td>
-                                        <td><i class="zmdi zmdi-window-minimize"></i></td>
-                                        <td><i class="zmdi zmdi-window-minimize"></i></td>
+                                        <td><span class="grade text-success text-center">A<br><small>(95%)</small></span></td>
+                                        <td><span class="grade text-center">1<sup>st</sup></span></td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -315,24 +311,20 @@
                                             Obioha Nzimiro
                                             <i class="zmdi zmdi-email pull-right"></i>
                                         </td>
-                                        <td><i class="zmdi zmdi-check zmdi-hc-2x text-warning"></i></td>
-                                        <td><i class="zmdi zmdi-check zmdi-hc-2x text-warning"></i></td>
-                                        <td><i class="zmdi zmdi-check zmdi-hc-2x text-success"></i></td>
-                                        <td><i class="zmdi zmdi-check zmdi-hc-2x text-success"></i></td>
-                                        <td><i class="zmdi zmdi-check zmdi-hc-2x text-success"></i></td>
+                                        <td><span class="grade text-warning text-center">C<br><small>(65%)</small></span></td>
+                                        <td><span class="grade text-success text-center">B<br><small>(79%)</small></span></td>
+                                        <td><span class="grade text-danger text-center">F<br><small>(49%)</small></span></td>
+                                        <td><span class="grade text-warning text-center">D<br><small>(59%)</small></span></td>
+                                        <td><span class="grade text-warning text-center">C<br><small>(69%)</small></span></td>
                                         <td><i class="zmdi zmdi-window-minimize"></i></td>
                                         <td><i class="zmdi zmdi-window-minimize"></i></td>
                                         <td><i class="zmdi zmdi-window-minimize"></i></td>
                                         <td><i class="zmdi zmdi-window-minimize"></i></td>
                                         <td><i class="zmdi zmdi-window-minimize"></i></td>
                                         <td><i class="zmdi zmdi-window-minimize"></i></td>
-                                        <td><i class="zmdi zmdi-window-minimize"></i></td>
-                                        <td><i class="zmdi zmdi-window-minimize"></i></td>
-                                        <td><i class="zmdi zmdi-window-minimize"></i></td>
-                                        <td><i class="zmdi zmdi-window-minimize"></i></td>
-                                        <td><i class="zmdi zmdi-window-minimize"></i></td>
-                                        <td><i class="zmdi zmdi-window-minimize"></i></td>
-                                        <td><i class="zmdi zmdi-window-minimize"></i></td>
+                                        <td><span class="grade text-warning text-center">C<br><small>(65%)</small></span></td>
+                                        <td><span class="grade text-center">3<sup>rd</sup></span></td>
+                                        <td></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -412,28 +404,21 @@
                         <div class="">
                             <form class="form-horizontal" role="form">
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label">Class</label>
-                                    <div class="col-sm-10">
+                                    <label class="col-sm-3 control-label">Class</label>
+                                    <div class="col-sm-9">
                                         <p class="form-control-static">Primary 5 Alpha (Mathematics)</p>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label">Date</label>
-                                    <div class="col-sm-5">
+                                    <label class="col-sm-3 control-label">Assignment</label>
+                                    <div class="col-sm-9">
                                         <select class="form-control">
-                                            <option>June 17th, 2016</option>
-                                            <option>June 20th, 2016</option>
-                                            <option>June 22nd, 2016</option>
-                                            <option>June 24th, 2016</option>
-                                            <option>June 27th, 2016</option>
-                                            <option>June 29th, 2016</option>
-                                            <option>July 1st, 2016</option>
-                                            <option>July 4th, 2016</option>
-                                            <option>July 6th, 2016</option>
-                                            <option>July 8th, 2016</option>
-                                            <option>July 11th, 2016</option>
-                                            <option>July 13th, 2016</option>
-                                            <option>July 15th, 2016</option>
+                                            <option>Pop Quiz #2</option>
+                                            <option>Homework #4</option>
+                                            <option>Homework #5</option>
+                                            <option>Pop Quiz #3</option>
+                                            <option>Mock Exam</option>
+                                            <option>Final Exams</option>
                                         </select>
                                     </div>
                                 </div>
@@ -444,33 +429,25 @@
                             <table class="table table-bordered" id="grade-assignment-table" style="border: none">
                                 <thead>
                                     <tr>
-                                        <th style="width: 200px">Students</th>
-                                        <th style="width: 60px" class="text-success">Present</th>
-                                        <th style="width: 60px" class="text-warning">Tardy</th>
-                                        <th style="width: 60px" class="text-danger">Absent</th>
+                                        <th style="width: 300px">Students</th>
+                                        <th style="width: 70px">Score</th>
                                         <th>Comments</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>Ayodeji Mabogunje</td>
-                                        <td><div class="radio radio-single radio-success"><input type="radio" name="radioAM" checked><label/></div></td>
-                                        <td><div class="radio radio-single radio-warning"><input type="radio" name="radioAM"><label/></div></td>
-                                        <td><div class="radio radio-single radio-danger"><input type="radio" name="radioAM"><label/></div></td>
+                                        <td><div><input type="text" size="3"></div></td>
                                         <td><textarea rows="2"></textarea></td>
                                     </tr>
                                     <tr>
                                         <td>Steven Ovadje</td>
-                                        <td><div class="radio radio-single radio-success"><input type="radio" name="radioSO" checked><label/></div></td>
-                                        <td><div class="radio radio-single radio-warning"><input type="radio" name="radioSO"><label/></div></td>
-                                        <td><div class="radio radio-single radio-danger"><input type="radio" name="radioSO"><label/></div></td>
+                                        <td><div><input type="text" size="3"></div></td>
                                         <td><textarea rows="2"></textarea></td>
                                     </tr>
                                     <tr>
                                         <td>Obioha Nzimiro</td>
-                                        <td><div class="radio radio-single radio-success"><input type="radio" name="radioON" checked><label/></div></td>
-                                        <td><div class="radio radio-single radio-warning"><input type="radio" name="radioON"><label/></div></td>
-                                        <td><div class="radio radio-single radio-danger"><input type="radio" name="radioON"><label/></div></td>
+                                        <td><div><input type="text" size="3"></div></td>
                                         <td><textarea rows="2"></textarea></td>
                                     </tr>
                                 </tbody>
@@ -495,15 +472,21 @@
                         <div class="">
                             <form class="form-horizontal" role="form">
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label">Class</label>
-                                    <div class="col-sm-10">
+                                    <label class="col-sm-3 control-label">Class</label>
+                                    <div class="col-sm-9">
                                         <p class="form-control-static">Primary 5 Alpha (Mathematics)</p>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">Date</label>
-                                    <div class="col-sm-10">
-                                        <p class="form-control-static">June 6th, 2016</p>
+                                    <label class="col-sm-3 control-label">Assignment</label>
+                                    <div class="col-sm-9">
+                                        <p class="form-control-static">Pop Quiz #1</p>
+                                    </div>
+                                    <label class="col-sm-3 control-label">Total Score</label>
+                                    <div class="col-sm-9">
+                                        <p class="form-control-static">25 pts</p>
+                                    </div>
+                                    <label class="col-sm-3 control-label">% of Final Grade</label>
+                                    <div class="col-sm-9">
+                                        <p class="form-control-static">10%</p>
                                     </div>
                                 </div>
                             </form>
@@ -513,34 +496,26 @@
                             <table class="table table-bordered" id="edit-assignment-table" style="border: none">
                                 <thead>
                                 <tr>
-                                    <th style="width: 200px">Students</th>
-                                    <th style="width: 60px" class="text-success">Present</th>
-                                    <th style="width: 60px" class="text-warning">Tardy</th>
-                                    <th style="width: 60px" class="text-danger">Absent</th>
+                                    <th style="width: 300px">Students</th>
+                                    <th style="width: 70px">Score</th>
                                     <th>Comments</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <td>Ayodeji Mabogunje</td>
-                                    <td><div class="radio radio-single radio-success"><input type="radio" name="radioAMe" checked><label/></div></td>
-                                    <td><div class="radio radio-single radio-warning"><input type="radio" name="radioAMe"><label/></div></td>
-                                    <td><div class="radio radio-single radio-danger"><input type="radio" name="radioAMe"><label/></div></td>
+                                    <td><div><input type="text" value="85" size="3"></div></td>
                                     <td><textarea rows="2"></textarea></td>
                                 </tr>
                                 <tr>
                                     <td>Steven Ovadje</td>
-                                    <td><div class="radio radio-single radio-success"><input type="radio" name="radioSOe"><label/></div></td>
-                                    <td><div class="radio radio-single radio-warning"><input type="radio" name="radioSOe"><label/></div></td>
-                                    <td><div class="radio radio-single radio-danger"><input type="radio" name="radioSOe" checked><label/></div></td>
-                                    <td><textarea rows="2">Steven's parents requested a day off for Steven</textarea></td>
+                                    <td><div><input type="text" value="90" size="3"></div></td>
+                                    <td><textarea rows="2"></textarea></td>
                                 </tr>
                                 <tr>
                                     <td>Obioha Nzimiro</td>
-                                    <td><div class="radio radio-single radio-success"><input type="radio" name="radioONe"><label/></div></td>
-                                    <td><div class="radio radio-single radio-warning"><input type="radio" name="radioONe" checked><label/></div></td>
-                                    <td><div class="radio radio-single radio-danger"><input type="radio" name="radioONe"><label/></div></td>
-                                    <td><textarea rows="2">Obioha was late because he was playing football :(</textarea></td>
+                                    <td><div><input type="text" value="49" size="3"></div></td>
+                                    <td><textarea rows="2">Obioha was caught cheating</textarea></td>
                                 </tr>
                                 </tbody>
                             </table>
