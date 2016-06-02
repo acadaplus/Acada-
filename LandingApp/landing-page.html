@@ -14,6 +14,9 @@
         <!--Morris Chart CSS -->
 		<link rel="stylesheet" href="../Common/plugins/morris/morris.css">
 
+        <!-- Sweet Alert css -->
+        <link href="../Common/plugins/bootstrap-sweetalert/sweet-alert.css" rel="stylesheet" type="text/css" />
+
         <link href="../Common/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="../Common/css/core.css" rel="stylesheet" type="text/css" />
         <link href="../Common/css/components.css" rel="stylesheet" type="text/css" />
@@ -42,7 +45,7 @@
 
                     <!-- LOGO -->
                     <div class="topbar-left">
-                        <a href="landing-page.html" class="logo"><span><i class="zmdi zmdi-graduation-cap"></i> acada<span>+</span></span></a>
+                        <a href="landing-page.html" class="logo"><span>acada<span>+</span></span></a>
                     </div>
                     <!-- End Logo container-->
 
@@ -127,7 +130,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="btn-group pull-right m-t-15">
-                            <button type="button" class="btn btn-custom waves-effect waves-light">Report An Issue <span class="m-l-5"><i class="fa fa-envelope"></i></span></button>
+                            <button type="button" class="btn btn-custom waves-effect waves-light unimplemented">Report An Issue <span class="m-l-5"><i class="fa fa-envelope"></i></span></button>
                         </div>
                         <h4 class="page-title">Select Your Application</h4>
                     </div>
@@ -136,7 +139,7 @@
                 <div class="row">
                     <div class="col-lg-2"></div>
                     <div class="col-lg-2 text-center">
-                        <a href="">
+                        <a href="#"  class="unimplemented">
                             <img src="../Common/images/application-icons/enrollment.png" class="img-circle thumb-xl img-thumbnail m-b-10" alt="Enrollment">
                             <p class="font-13 m-b-30">ENROLLMENT</p>
                         </a>
@@ -154,7 +157,7 @@
                         </a>
                     </div>
                     <div class="col-lg-2 text-center">
-                        <a href="">
+                        <a href="#"  class="unimplemented">
                             <img src="../Common/images/application-icons/behavior.png" class="img-circle thumb-xl img-thumbnail m-b-10" alt="Enrollment">
                             <p class="font-13 m-b-30">BEHAVIOUR</p>
                         </a>
@@ -165,7 +168,7 @@
                 <div class="row">
                     <div class="col-lg-2"></div>
                     <div class="col-lg-2 text-center">
-                        <a href="">
+                        <a href="#"  class="unimplemented">
                             <img src="../Common/images/application-icons/reportcards.png" class="img-circle thumb-xl img-thumbnail m-b-10" alt="Enrollment">
                             <p class="font-13 m-b-30">REPORT CARDS</p>
                         </a>
@@ -177,7 +180,7 @@
                         </a>
                     </div>
                     <div class="col-lg-2 text-center">
-                        <a href="">
+                        <a href="#"  class="unimplemented">
                             <img src="../Common/images/application-icons/announcements.png" class="img-circle thumb-xl img-thumbnail m-b-10" alt="Enrollment">
                             <p class="font-13 m-b-30">ANNOUNCEMENTS</p>
                         </a>
@@ -194,28 +197,11 @@
                 <div class="row">
                     <div class="col-lg-2"></div>
                     <div class="col-lg-2 text-center">
-                        <a href="">
+                        <a href="#"  class="unimplemented">
                             <img src="../Common/images/application-icons/configuration.png" class="img-circle thumb-xl img-thumbnail m-b-10" alt="Enrollment">
                             <p class="font-13 m-b-30">CONFIGURATION</p>
                         </a>
                     </div>
-                    <div class="col-lg-2 text-center collapse">
-                        <img src="../Common/images/application-icons/schedule.png" class="img-circle thumb-xl img-thumbnail m-b-10 disabled-image" alt="Enrollment">
-                        <p class="text-muted font-13 m-b-30">SCHEDULE</p>
-                    </div>
-                    <div class="col-lg-2 text-center collapse">
-                        <img src="../Common/images/application-icons/sickbay.png" class="img-circle thumb-xl img-thumbnail m-b-10 disabled-image" alt="Enrollment">
-                        <p class="text-muted font-13 m-b-30">SICK BAY</p>
-                    </div>
-                    <div class="col-lg-2 text-center collapse">
-                        <img src="../Common/images/application-icons/employee.png" class="img-circle thumb-xl img-thumbnail m-b-10 disabled-image" alt="Enrollment">
-                        <p class="text-muted font-13 m-b-30">EMPLOYEE MANAGER</p>
-                    </div>
-                    <div class="col-lg-2"></div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-2"></div>
                     <div class="col-lg-2 text-center collapse">
                         <img src="../Common/images/application-icons/curriculum.png" class="img-circle thumb-xl img-thumbnail m-b-10 disabled-image" alt="Enrollment">
                         <p class="text-muted font-13 m-b-30">CURRICULUM</p>
@@ -224,6 +210,11 @@
                         <img src="../Common/images/application-icons/examprep.png" class="img-circle thumb-xl img-thumbnail m-b-10 disabled-image" alt="Enrollment">
                         <p class="text-muted font-13 m-b-30">EXAM PREP</p>
                     </div>
+                    <div class="col-lg-2 text-center collapse">
+                        <img src="../Common/images/application-icons/sickbay.png" class="img-circle thumb-xl img-thumbnail m-b-10 disabled-image" alt="Enrollment">
+                        <p class="text-muted font-13 m-b-30">SICK BAY</p>
+                    </div>
+                    <div class="col-lg-2"></div>
                 </div>
 
                 <!-- Footer -->
@@ -326,6 +317,10 @@
         <!--Morris Chart-->
 		<script src="../Common/plugins/morris/morris.min.js"></script>
 		<script src="../Common/plugins/raphael/raphael-min.js"></script>
+
+        <!-- Sweet Alert js -->
+        <script src="../Common/plugins/bootstrap-sweetalert/sweet-alert.min.js"></script>
+        <script src="../Common/js/jquery.sweet-alert.init.js"></script>
 
         <!-- Dashboard init -->
 

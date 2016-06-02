@@ -10,6 +10,9 @@
 
         <title>Acada+ - School Management Platform</title>
 
+        <!-- Sweet Alert css -->
+        <link href="../Common/plugins/bootstrap-sweetalert/sweet-alert.css" rel="stylesheet" type="text/css" />
+
         <link href="../Common/plugins/summernote/dist/summernote.css" rel="stylesheet" /><!-- Custom box css -->
         <link href="../Common/plugins/custombox/dist/custombox.min.css" rel="stylesheet">
 
@@ -43,7 +46,7 @@
 
                     <!-- LOGO -->
                     <div class="topbar-left">
-                        <a href="../LandingApp/landing-page.html" class="logo"><span><i class="zmdi zmdi-graduation-cap"></i> acada<span>+</span></span></a>
+                        <a href="../LandingApp/landing-page.html" class="logo"><span>acada<span>+</span></span></a>
                     </div>
                     <!-- End Logo container-->
 
@@ -105,7 +108,7 @@
                                 <a class="active"><i class="zmdi zmdi-email"></i> <span> Messages </span> </a>
                             </li>
                             <li>
-                                <a href="inbox.html"><i class="zmdi zmdi-settings"></i> <span> Settings </span> </a>
+                                <a href="#" class="unimplemented"><i class="zmdi zmdi-settings"></i> <span> Settings </span> </a>
                             </li>
                         </ul>
                         <!-- End navigation menu  -->
@@ -135,10 +138,10 @@
                                                 <ul class="list-unstyled">
                                                     <li class="active"><a href="javascript:void(0);">Inbox<span> (43)</span></a>
                                                     </li>
-                                                    <li><a href="javascript:void(0);">Important</a></li>
-                                                    <li><a href="javascript:void(0);">Sent</a></li>
-                                                    <li><a href="javascript:void(0);">Drafts</a></li>
-                                                    <li><a href="javascript:void(0);">Trash</a></li>
+                                                    <li><a href="javascript:void(0);" class="unimplemented">Important</a></li>
+                                                    <li><a href="javascript:void(0);" class="unimplemented">Sent</a></li>
+                                                    <li><a href="javascript:void(0);" class="unimplemented">Drafts</a></li>
+                                                    <li><a href="javascript:void(0);" class="unimplemented">Trash</a></li>
                                                 </ul>
                                             </menu>
                                         </div>
@@ -621,6 +624,10 @@
         <!-- Modal-Effect -->
         <script src="../Common/plugins/custombox/dist/custombox.min.js"></script>
         <script src="../Common/plugins/custombox/dist/legacy.min.js"></script>
+
+        <!-- Sweet Alert js -->
+        <script src="../Common/plugins/bootstrap-sweetalert/sweet-alert.min.js"></script>
+        <script src="../Common/js/jquery.sweet-alert.init.js"></script>
 
         <!-- Page specific only -->
         <script src="js/inbox.js"></script>
